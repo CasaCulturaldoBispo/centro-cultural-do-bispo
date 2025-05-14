@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro Cultural do Bispo Hostel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Tex Gyre Termes', serif;
+      background-color: #fffef8;
+      color: #333;
+    }
+    header {
+      background-color: #d6d383;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #add8e6;
+    }
+    nav a {
+      padding: 14px 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #cc7f3d;
+      color: white;
+    }
+    .hero {
+      background-image: url('capa.jpg'); /* substituir por URL da imagem real */
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: 'Hello Paris', cursive;
+      font-size: 3em;
+    }
+    .content {
+      display: none;
+      padding: 40px;
+    }
+    #map {
+      width: 100%;
+      height: 300px;
+    }
+    footer {
+      background-color: #88904b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body><header>
+  <h1>Centro Cultural do Bispo Hostel</h1>
+</header><nav>
+  <a href="#" onclick="showTab('sobre')">Sobre</a>
+  <a href="#" onclick="showTab('reservas')">Reservas</a>
+  <a href="#" onclick="showTab('voluntariado')">Voluntariado</a>
+  <a href="#" onclick="showTab('galeria')">Galeria</a>
+  <a href="#" onclick="showTab('
