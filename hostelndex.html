@@ -1,162 +1,48 @@
-
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Centro Cultural do Bispo Hostel</title>
-  <style>
-    :root {
-      --azul-principal: #007BFF;
-      --cinza: #797870;
-      --verde-oliva: #88904b;
-      --laranja-queimado: #cc7f3d;
-      --amarelo-claro: #d6d383;
-      --bege-rosado: #debcb0;
-    }
-
-    body {
-      font-family: 'Tex Gyre Termes', serif;
-      margin: 0;
-      background: #fdfdfc;
-      color: var(--cinza);
-    }
-
-    header, footer {
-      background-color: var(--azul-principal);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      border-bottom: 2px solid var(--amarelo-claro);
-      padding-bottom: 0.5rem;
-      color: var(--verde-oliva);
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    .galeria img {
-      width: 100%;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      border: 1px solid var(--bege-rosado);
-    }
-
-    form input, form select, form button {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid var(--cinza);
-      border-radius: 5px;
-      font-size: 1rem;
-      background-color: #fff;
-    }
-
-    form button {
-      background-color: var(--azul-principal);
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    form button:hover {
-      background-color: #0056b3;
-    }
-
-    footer a {
-      color: var(--amarelo-claro);
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
   <header>
-    <h1>Centro Cultural do Bispo Hostel</h1>
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#quartos">Quartos</a>
-      <a href="#reservas">Reservas</a>
-      <a href="#galeria">Galeria</a>
-    </nav>
-  </header>
-
-  <section id="sobre">
-    <h2>Sobre</h2>
-    <p>O Centro Cultural do Bispo Hostel é mais que uma hospedagem — é um espaço de arte, cultura e conexão. Localizado no coração de Salvador, reunimos conforto, história e criatividade em um só lugar.</p>
-  </section>
-
-  <section id="quartos">
-    <h2>Quartos</h2>
-    <p>Oferecemos dormitórios coletivos, suítes privativas e quartos temáticos decorados por artistas locais. Todos os quartos são confortáveis e bem ventilados.</p>
-  </section>
-
-  <section id="reservas">
-    <h2>Reservas</h2>
-    <form action="https://formsubmit.co/seuemail@email.com" method="POST">
-      <label>Nome:<br>
-        <input type="text" name="nome" required>
-      </label>
-
-      <label>E-mail:<br>
-        <input type="email" name="email" required>
-      </label>
-
-      <label>Data de Entrada:<br>
-        <input type="date" name="entrada" required>
-      </label>
-
-      <label>Data de Saída:<br>
-        <input type="date" name="saida" required>
-      </label>
-
-      <label>Tipo de Quarto:<br>
-        <select name="quarto" required>
-          <option value="">Selecione</option>
-          <option value="dormitorio">Dormitório Coletivo</option>
-          <option value="privativa">Suíte Privativa</option>
-          <option value="tematico">Quarto Temático</option>
-        </select>
-      </label>
-
-      <button type="submit">Enviar Reserva</button>
-    </form>
-  </section>
-
-  <section id="galeria">
-    <h2>Galeria</h2>
-    <div class="galeria">
-      <img src="https://via.placeholder.com/800x400?text=Foto+1" alt="Foto 1" />
-      <img src="https://via.placeholder.com/800x400?text=Foto+2" alt="Foto 2" />
+    <div class="container">
+      <h1>Centro Cultural do Bispo Hostel</h1>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#reserva">Reserva</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
     </div>
-  </section>
+  </header>  <section id="banner">
+    <div class="container">
+      <h2>Seu espaço cultural no coração da cidade</h2>
+      <p>Conecte-se com a arte, a história e novas amizades</p>
+    </div>
+  </section>  <section id="sobre" class="container">
+    <h2>Sobre o Hostel</h2>
+    <p>O Centro Cultural do Bispo Hostel é mais do que um lugar para dormir. É um espaço de trocas culturais, arte e acolhimento no centro histórico da cidade. Aqui, cada canto conta uma história.</p>
+  </section>  <section id="galeria" class="container">
+    <h2>Galeria</h2>
+    <div class="grid">
+      <img src="img1.jpg" alt="Foto do hostel" />
+      <img src="img2.jpg" alt="Área comum" />
+      <img src="img3.jpg" alt="Quarto compartilhado" />
+      <img src="img4.jpg" alt="Espaço cultural" />
+    </div>
+  </section>  <section id="reserva" class="container">
+    <h2>Faça sua reserva</h2>
+    <form action="/reserva" method="POST">
+      <label for="nome">Nome completo</label>
+      <input type="text" id="nome" name="nome" required /><label for="email">E-mail</label>
+  <input type="email" id="email" name="email" required />
 
-  <footer>
-    <p>Siga a gente no <a href="https://www.instagram.com/seuusuario" target="_blank">Instagram</a></p>
-    <p>&copy; 2025 Centro Cultural do Bispo</p>
-  </footer>
+  <label for="entrada">Data de entrada</label>
 
-</body>
-</html>
+      
+    
+      
