@@ -1,60 +1,69 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Centro Cultural do Bispo Hostel</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Tex Gyre Termes', serif;
+      font-family: 'Arial', serif;
       background-color: #fffef8;
-      color: #333;
     }
+
     header {
       background-color: #d6d383;
       padding: 20px;
       text-align: center;
     }
+
     nav {
+      background-color: #add8e6;
       display: flex;
       justify-content: center;
-      background-color: #add8e6;
     }
+
     nav a {
+      color: #333;
       padding: 14px 20px;
       text-decoration: none;
-      color: #333;
       font-weight: bold;
-      transition: background-color 0.3s;
     }
+
     nav a:hover {
       background-color: #cc7f3d;
       color: white;
     }
+
     .hero {
-      background-image: url('capa.jpg'); /* substituir por URL da imagem real */
-      background-size: cover;
-      background-position: center;
+      background: url('capa.jpg') no-repeat center center/cover;
       height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       text-shadow: 2px 2px 4px #000;
-      text-align: center;
     }
+
     .hero h1 {
-      font-family: 'Hello Paris', cursive;
       font-size: 3em;
     }
+
     .content {
       display: none;
       padding: 40px;
     }
-    #map {
+
+    .active {
+      display: block;
+    }
+
+    #map iframe {
       width: 100%;
       height: 300px;
+      border: none;
     }
+
     footer {
       background-color: #88904b;
       color: white;
@@ -63,11 +72,67 @@
     }
   </style>
 </head>
-<body><header>
-  <h1>Centro Cultural do Bispo Hostel</h1>
-</header><nav>
-  <a href="#" onclick="showTab('sobre')">Sobre</a>
-  <a href="#" onclick="showTab('reservas')">Reservas</a>
-  <a href="#" onclick="showTab('voluntariado')">Voluntariado</a>
-  <a href="#" onclick="showTab('galeria')">Galeria</a>
-  <a href="#" onclick="showTab('
+<body>
+
+  <header>
+    <h1>Centro Cultural do Bispo Hostel</h1>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showTab('sobre')">Sobre</a>
+    <a href="#" onclick="showTab('reservas')">Reservas</a>
+    <a href="#" onclick="showTab('voluntariado')">Voluntariado</a>
+    <a href="#" onclick="showTab('galeria')">Galeria</a>
+    <a href="#" onclick="showTab('localizacao')">Localização</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Bem-vindo ao coração do Pelourinho</h1>
+  </div>
+
+  <div id="sobre" class="content">
+    <h2>Sobre</h2>
+    <p>O Centro Cultural do Bispo Hostel é um espaço de acolhimento e cultura no coração do Pelourinho.</p>
+  </div>
+
+  <div id="reservas" class="content">
+    <h2>Reservas</h2>
+    <p>Reserve seu quarto conosco! Em breve um sistema de reservas online.</p>
+  </div>
+
+  <div id="voluntariado" class="content">
+    <h2>Voluntariado</h2>
+    <p>Contribua com nosso projeto cultural como voluntário. Entre em contato!</p>
+  </div>
+
+  <div id="galeria" class="content">
+    <h2>Galeria</h2>
+    <p>Confira fotos do nosso espaço e atividades culturais.</p>
+  </div>
+
+  <div id="localizacao" class="content">
+    <h2>Localização</h2>
+    <div id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.855315404435!2d-38.51080538463846!3d-12.973040990857322"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p>Centro Cultural do Bispo Hostel - Pelourinho, Salvador - Bahia</p>
+  </footer>
+
+  <script>
+    function showTab(id) {
+      const tabs = document.querySelectorAll('.content');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
